@@ -3,6 +3,8 @@ services:
     image: itzcrazykns1337/perplexica:latest
     ports:
       - '3000:3000'
+    labels:
+      - 'traefik.http.middlewares.mybasicauth.basicauth.users=test:$2y$12$ci.4U63YX83CwkyUrjqxAucnmi2xXOIlEF6T/KdP9824f1Rf1iyNG'
     volumes:
       - data:/home/perplexica/data
       - uploads:/home/perplexica/uploads
